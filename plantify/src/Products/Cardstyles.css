@@ -1,0 +1,74 @@
+.card-frame {
+    background-color: #9a9b78; /* Soft green for a pleasant look */
+    border: 1px solid rgb(200, 230, 200); /* Subtle border */
+    border-radius: 20px; /* Rounded corners */
+    border-width:1.5px;
+    padding: 20px;
+    height: 300px; /* Uniform height for all cards */
+    width: 200px; /* Uniform width for all cards */
+    margin: 20px; /* Space between cards */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+    border-color: #6e6969;
+}
+.card-frame:hover {
+    transform: scale(1.05); /* Slight zoom-in on hover */
+}
+.plant-img {
+    max-width: 100%;
+    height: auto;
+    border-color:#333;
+    border-width: 2ch;
+    border-radius: 15px; /* Rounded edges for the image */
+    margin-bottom: 5x; /* Space below the image */
+}
+
+.card-title {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333; /* Dark gray for better readability */
+    margin: 10px 10px; /* Space around the title */
+}
+.card-price{
+    font-family: 'Arial', sans-serif;
+    font-size: 1.1rem;
+    color: #fcfcfc; /* Dark gray for better readability */
+    margin: 10px 0;
+}
+
+.misc-box {
+    display:flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+    gap: 8px; /* Space between rows */
+    background-color: #bcbda4;
+    padding-top:10px;
+    padding-bottom:3px;
+    border-radius: 8px;
+}
+
+.misc-box-1{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1px;
+    gap: 12px; /* Adjust gap between buttons */
+}
+
+.card-actions button:hover {
+    background-color: #1a3e1a; /* Light green on hover */
+}
+
+.qty {
+    display: flex; /* Use Flexbox for alignment */
+    align-items: center; /* Center align vertically */
+    justify-content: space-between; /* Spread out the children evenly */
+    gap: 13px; /* Add space between the children */
+    padding-bottom: 8px;
+    padding-top:1px;
+}

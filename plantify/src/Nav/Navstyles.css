@@ -1,0 +1,41 @@
+/* Styles for the navigation bar container */
+.nav-container {
+  width: 100%; /* Full-width navigation bar */
+  max-width: 1200px; /* Optional: Limit the maximum width */
+  margin: 0 auto; /* Center the navigation bar within its parent */
+  padding:  2rem; /* Add horizontal padding for spacing */
+  background-color:#f8e9de; /* Background color */
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Push items to the edges */
+  box-sizing: border-box; /* Include padding in width calculations */
+  height:70px;
+}
+
+/* Styles for the logo container */
+.nav-container .logo img {
+  height: 50px; /* Adjust logo size */
+  width: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure proper scaling */
+  margin:25px 10px;
+}
+
+/* Styles for the cart container */
+.nav-container .cart img {
+  height: 44px; /* Adjust cart icon size */
+  width: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure proper scaling */
+}
+
+.items{
+  position: absolute;
+  background:rgb(180, 0, 0);
+  color:white;
+  font-size:small;
+  border-radius:100%;
+  padding:5px;
+  padding-top:1px;
+  padding-bottom:1px;
+  justify-content: center;
+  justify-items: center;
+}

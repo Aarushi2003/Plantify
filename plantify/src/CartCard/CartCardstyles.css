@@ -1,0 +1,81 @@
+.cartcard-frame {
+    background-color: #9a9b78; /* Soft green for a pleasant look */
+    border: 1px solid rgb(200, 230, 200); /* Subtle border */
+    border-radius: 20px; /* Rounded corners */
+    padding: 20px;
+    width: 100%; /* Full width to make it responsive */
+    max-width: 500px; /* Limit the maximum width */
+    max-height: 150px;
+    margin: 5px auto; /* Center the card horizontally */
+    display: flex; /* Arrange contents horizontally */
+    flex-direction: row; /* Horizontal layout */
+    align-items: center; /* Center items vertically */
+    gap: 20px; /* Space between image and content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease;
+    border-color: #6e6969;
+}
+
+.img-contnr {
+    flex-shrink: 0; /* Prevent the image container from shrinking */
+    width: 200px; /* Fixed width for the image container */
+    height: 200px; /* Fixed height for the image container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pimg {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 15px; /* Rounded edges for the image */
+    object-fit: cover; /* Ensures image fits nicely within the container */
+}
+
+.others {
+    display: flex;
+    flex-direction: column; /* Stack contents vertically */
+    flex: 1; /* Take up remaining space in the card */
+    gap: 2px; /* Space between rows */
+}
+
+.card-title {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333; /* Dark gray for better readability */
+    margin: 0; /* Remove default margin */
+}
+
+.price-qty {
+    display: flex;
+    flex-direction: row; /* Arrange price and quantity horizontally */
+    justify-content: space-between; /* Space out price and quantity */
+    align-items: center; /* Align them vertically */
+    gap: 5px; /* Optional spacing */
+}
+
+.price {
+    font-size: 1.3rem;
+    color: #fff; /* White for better contrast */
+}
+
+.qty {
+    padding-right: 20px;
+    font-size: 1.3rem;
+    color: #fff; /* White for better contrast */
+}
+
+.subtotal-delete {
+    display: flex;
+    flex-direction: row; /* Arrange subtotal and button horizontally */
+    justify-content:space-between; /* Space out subtotal and button */
+    align-items: center; /* Align them vertically */
+    gap: 5px;
+}
+
+.subtotal {
+    font-size: 1.3rem;
+    color: #fff;
+}
+

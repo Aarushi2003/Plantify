@@ -1,0 +1,26 @@
+.cart-container{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    padding-top:20px;
+    row-gap: 0px;
+    background-color: #ece5dcb6; /* Subtle background for the section */
+    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.1); /* Slight shadow for emphasis */
+    justify-items: center;
+    margin: 35px; /* Space from border */
+    margin-top: 30px;
+}
+.Total-amt{
+    background:white;
+    color:teal;
+    height: 40px;
+    width: 1060px;
+    padding-top:20px;
+    
+}
+.cart-items-container {
+    display: flex;
+    flex-direction:column;
+    gap: 20px; /* Spacing between cards */
+    justify-content: center; /* Center the cards horizontally */
+}
