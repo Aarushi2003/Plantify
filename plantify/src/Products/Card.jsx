@@ -1,53 +1,47 @@
 import React , { useState }from 'react';
 import Button from '../button.jsx';
-import { geturl } from '../utils.js';
 import './Cardstyles.css'; 
-function Card({name,price})
-{   
-    
-    const[qty,setqty]=useState(0);
-    const [isAdded, setIsAdded] = useState(false);
-    const [totalcost,settotalcost]=useState(0);
 
+function Card({name,price,imgurl,qty})
+{  
+    const [isAdded, setIsAdded] = useState(false);
 
     const decrementqty=()=>{
         if(qty>0)
         {
-            const newqty=qty-1;
-            setqty(newqty);
-        if (newqty === 0) {
-            setIsAdded(false);
+            qty=qty-1;
+            if (newqty === 0) {
+                setIsAdded(false);
         }
-        updateTotalCost(newqty);
+        updateTotalCost(qty);
         }
     };
 
     const incrementqty=()=>{
-        const newqty=qty+1;
-        setqty(newqty);
+        qty=qty+1;
 
         if (!isAdded) {
             handleAddToCart();//everytime we increase the qty the add to cart is turned to added
         }
-        updateTotalCost(newqty); 
+        updateTotalCost(qty); 
     }; 
 
     const handleAddToCart = () => {
-        setIsAdded(true); // Mark the item as added to cart
         if(qty===0){
-        setqty(1);//qty has to be 1 if add to cart button is pressed when initially it was 0
-        updateTotalCost(1);
+            qty=1;//qty has to be 1 if add to cart button is pressed when initially it was 0
+            setIsAdded(true); // Mark the item as added to cart
+            updateTotalCost(1);
         }
     };
 
     const updateTotalCost = (currentQty) => {
-        settotalcost(currentQty * price); // Update total cost based on current quantity
+        settotalcost(currentQty * (price)); // Update total cost based on current quantity
     };
 
     return (
         <>
             <div className='card-frame'>
-                <img className='plant-img' src={geturl({name})}>
+                <img className='plant-img' src={imgurl}>
                 </img>
                 <h1 className='card-title'>{name}</h1>
                 <div className="misc-box">

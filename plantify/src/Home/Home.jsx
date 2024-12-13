@@ -2,8 +2,8 @@ import React from 'react';
 import Nav from "../Nav/Nav.jsx";
 import './Homestyles.css';
 import Button from '../button.jsx';
-import Product from '../Products/Product.jsx';
 import { useNavigate } from "react-router-dom";//used to go navigate to a diff page
+
 function Home()
 {
     const navigate = useNavigate();

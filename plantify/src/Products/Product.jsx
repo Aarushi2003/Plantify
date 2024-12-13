@@ -1,14 +1,26 @@
 import React ,{useState} from "react";
 import Card from "./Card.jsx";
-import './Productstyles.css';
 import Nav from "../Nav/Nav.jsx";
 import Button from "../button.jsx";
+import products from "../carddata";  // Now the file is in the src directory
+import './Productstyles.css';
+
 function Product()
 {
     const [filterdropdown,setFilterdropdown] =useState(false);
     const [sortdropdown,setSortdropdown]=useState(false);
+    
     const ToggleFilterDropdown=()=> setFilterdropdown(!filterdropdown);
     const ToggleSortDropdown=()=>setSortdropdown(!sortdropdown);
+
+    function dividearray(array, size) {
+        const result = [];
+        for (let i = 0; i < array.length; i += size) {
+            result.push(array.slice(i, i + size));
+        }
+        return result;
+    }
+    const group = dividearray(products,3);//each row has only 3 cards
 
     return(
         <>
@@ -43,18 +55,10 @@ function Product()
                     </div>
                 </div>
                 <div className="product-container">
-                    <div>
-                    <Card name="cactus1" price="520" ></Card>
-                    <Card name="cactus2" price="420" ></Card>
-                    </div>
-                    <div>
-                    <Card name="flower1" price="320" ></Card>
-                    <Card name="flower2" price="450" ></Card>
-                    </div>
-                    <div>
-                    <Card name="indoor1" price="620" ></Card>
-                    <Card name="indoor2" price="420" ></Card>
-                    </div>
+                    {group.map((product) => (
+                        <Card key={product.id} name={product.name} price={product.price} imgurl={product.imgUrl} />
+                    )
+                    )}
                 </div>
             </div>
         </>
