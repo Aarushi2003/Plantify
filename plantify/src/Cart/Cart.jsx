@@ -17,24 +17,21 @@ function Cart({products})
             <div className="Total-amt" style={{fontSize:"larger", fontWeight:"bold"}}>Total Cart Amount - Rs.{totalAmount}</div>
             <h1 >Cart Items</h1>
             <div className="cart-items-container">
-                {data.some((element) => element.incart === 1) ? (
-                    data.map((element) => {
-                        if (element.incart === 1) {
-                            totcartamt+={price}*{qty};
-                            return (
-                                <div key={element.id}>
-                                    <CartCard name={element.name} price={element.price} qty={element.qty} />
-                                </div>
-                            );
-                        }
-                        return null; // Skip items not in the cart
-                    })
-                ) : (
-                    <p1>No items in the cart</p1>
-                )}
+                {cartItems.length > 0 ? (
+                        cartItems.map((item) => (
+                            <CartCard
+                                key={item.id}
+                                name={item.name}
+                                price={item.price}
+                                qty={item.qty}
+                            />
+                        ))
+                    ) : (
+                        <p>No items in the cart</p>
+                    )}
             </div>
         </div>
     </>
     );
 }
-export default Cart;
+export default Cart; 

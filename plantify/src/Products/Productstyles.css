@@ -1,7 +1,10 @@
 .non-nav{
     margin-top: 25px;
 }
-
+.product-row {
+    display: flex;
+    justify-content: space-between;
+  }
 .top-box {
     text-align: left;
     margin: 0 35px; /* No space at the top for seamless join */
