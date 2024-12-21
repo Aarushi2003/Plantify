@@ -12,7 +12,7 @@ function Nav({ totalprods }) {
                 </div>
                 <div className="cart">
                     <a href="/cart"><img src={cart} alt="cart" /></a>
-                    <span className='items' >{totalprods}0</span>
+                    <span className='items' >{totalprods}</span>
                 </div>
             </div>
         </>
